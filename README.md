@@ -2,6 +2,8 @@
 
 **Your code is a whole world. Explore it.**
 
+*Created entirely with Codex as a learning exercise.*
+
 GitScape turns a source repository into an interactive 3D city. Folders become districts, files become buildings, and local imports connect them. Fly through a project, find the file you need, and open its source without leaving the map.
 
 This is a local prototype. No AI service, account, or API key is needed.
