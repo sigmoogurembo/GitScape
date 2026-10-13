@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+.test-tmp/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx

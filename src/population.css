@@ -1,0 +1,53 @@
+#app .population-status {
+  display: flex; align-items: center; gap: 5px; padding: 2px 0; color: var(--accent);
+  font: 9px "Consolas", monospace; white-space: nowrap;
+}
+#app .population-status svg { width: 11px; height: 11px; }
+#app .population-status:hover { color: var(--text); }
+#app .population-status.population-pending { color: var(--muted); }
+#app .population-status.population-failed { color: #dc997d; }
+#app[data-style="tool"] .population-status.population-failed { color: #b55736; }
+#app .population-dialog {
+  background: var(--surface); color: var(--text); border: 1px solid var(--border);
+  width: min(460px, calc(100vw - 32px)); padding: 22px; max-height: calc(100dvh - 40px);
+  overflow: auto; box-shadow: 0 16px 70px #0004;
+}
+#app .population-dialog::backdrop { background: #1c211c80; }
+#app .population-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; font: 9px "Consolas", monospace; letter-spacing: .8px; color: var(--muted); }
+#app .population-close { display: grid; place-items: center; width: 24px; height: 24px; padding: 0; }
+#app .population-close:hover { color: var(--text); background: var(--inset); }
+#app .population-dialog h2 { font: 400 27px Georgia, serif; letter-spacing: -.5px; margin: 19px 0 12px; }
+#app .population-description { color: var(--muted); font-size: 12px; line-height: 1.7; margin: 0 0 19px; }
+#app .population-current { padding: 14px 0; margin-bottom: 19px; border-block: 1px solid var(--border); display: flex; flex-direction: column; gap: 7px; }
+#app .population-current strong { font: 13px "Consolas", monospace; color: var(--accent); }
+#app .population-source { font: 10px "Consolas", monospace; overflow-wrap: anywhere; }
+#app .population-time { font: 9px "Consolas", monospace; color: var(--muted); }
+#app .population-time:empty { display: none; }
+#app .population-density { margin: 0 0 22px; }
+#app .population-density-title { display: flex; justify-content: space-between; color: var(--muted); font: 9px "Consolas", monospace; }
+#app .population-density-title span { font-size: 9px; color: var(--accent); }
+#app .population-density-options { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--border); margin-top: 10px; }
+#app .population-density-options button { padding: 9px 4px; font: 11px "Consolas", monospace; color: var(--muted); }
+#app .population-density-options button + button { border-left: 1px solid var(--border); }
+#app .population-density-options button.active { background: var(--accent-soft); color: var(--accent); }
+#app .population-density-options button:hover { color: var(--text); }
+#app .population-density p { color: var(--muted); font-size: 10px; line-height: 1.6; margin: 9px 0 0; }
+#app .population-dialog label { display: block; color: var(--muted); font: 9px "Consolas", monospace; letter-spacing: .4px; margin-bottom: 9px; }
+#app .population-dialog input { display: block; background: var(--inset); color: var(--text); border: 1px solid var(--border); width: 100%; padding: 11px 10px; font: 11px "Consolas", monospace; border-radius: 0; }
+#app .population-dialog input::placeholder { color: var(--muted); opacity: .8; font-size: 10px; }
+#app .population-dialog input:focus-visible { border-color: var(--accent); }
+#app .population-help { color: var(--muted); font-size: 10px; line-height: 1.7; margin: 9px 0 17px; }
+#app .population-error { padding: 9px 0 13px; color: #dc997d; font-size: 11px; line-height: 1.6; }
+#app[data-style="tool"] .population-error { color: #a94729; }
+#app .population-load { border: 1px solid var(--accent); background: var(--accent-soft); color: var(--accent); width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px; font-size: 11px; }
+#app .population-load:hover:not(:disabled) { color: var(--text); background: var(--inset); }
+#app .population-actions { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 15px; }
+#app .population-actions button { padding: 0; font-size: 10px; color: var(--muted); }
+#app .population-actions button:hover { color: var(--accent); }
+#app .population-cache-note { font: 9px/1.7 "Consolas", monospace; color: var(--muted); margin: 19px 0 0; }
+@media (max-width: 600px) {
+  #app .statusbar { gap: 11px; }
+  #app .status-legend { display: none; }
+  #app .population-status { margin-left: auto; font-size: 8px; }
+  #app .population-dialog { padding: 18px; }
+}

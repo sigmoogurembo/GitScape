@@ -1,0 +1,24 @@
+{
+  "name": "gitscape",
+  "version": "0.1.0",
+  "description": "Your code is a world. Explore local repositories as interactive 3D cities.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "node server/index.mjs",
+    "build": "vite build",
+    "start": "node server/index.mjs --production",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "tar": "^7.5.22",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "vite": "^7.1.7"
+  }
+}
